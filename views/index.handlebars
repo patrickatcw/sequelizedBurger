@@ -1,0 +1,27 @@
+<center>
+ <h2>EAT-THIS-BURGER!!!</h2>
+ <h5>CREATE A BURGER OF YOUR DESIRE THAT YOU WANT TO CHOW DOWN, THEN CLICK THE "CLICK" BUTTON</h5>
+<input type="text" id="ca" name="name">
+<button id="click">CLICK!</button>
+  <ul style="list-style: none;">
+  {{#each burgers}}
+    {{#unless devoured}}
+    <li data-id="{{id}}" data-devoured="{{devoured}}">
+  {{burger_name}}
+      <button class="devour" data-id="{{id}}">DEVOUR!</button>
+    </li>
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>DEVOURED BURGERS</h2>
+<ul style="list-style: none;">
+  {{#each burgers}}
+    {{#if devoured}}
+      {{burger_name}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+</form>
+</center>
